@@ -35,7 +35,7 @@ public class YazarKitaplariListele {
             System.out.println(kitaplar[0]);
             int sayac = 1;
             for (String kitap : kitaplar) {
-                String baslik = parcaGetir(kitap, "\"title\":",0);
+                String baslik = parcaGetir(kitap, "\"title\":", 0);
                 baslik = java.net.URLDecoder.decode(baslik, "UTF-8");
                 baslik = baslik.replace("\\u0131", "ı")
                         .replace("\\u00e7", "ç")
@@ -47,8 +47,8 @@ public class YazarKitaplariListele {
                         .replace("\\u015e", "Ş")
                         .replace("\\u00d6", "Ö")
                         .replace("\\u00c7", "Ç");
-                String yazar = parcaGetir(kitap, "\"author_name\":\\[\"",0);
-                String yil = parcaGetir(kitap, "\"first_publish_year\":",1);
+                String yazar = parcaGetir(kitap, "\"author_name\":\\[\"", 0);
+                String yil = parcaGetir(kitap, "\"first_publish_year\":", 1);
 
                 if (baslik != null) {
                     System.out.println("Kitap " + sayac++);
@@ -58,8 +58,8 @@ public class YazarKitaplariListele {
                     System.out.println("------------------------");
                 }
 
-                //if (sayac > 5)
-                //    break; // sadece ilk 5 kitabı gösterelim örnek için
+                // if (sayac > 5)
+                // break; // sadece ilk 5 kitabı gösterelim örnek için
             }
 
         } catch (Exception e) {
@@ -73,7 +73,8 @@ public class YazarKitaplariListele {
         if (index != -1) {
             int basla = index + anahtar.length();
             int bitis = veri.indexOf("\"", basla);
-            if(tur==0)bitis = veri.indexOf("\"", bitis + 1);
+            if (tur == 0)
+                bitis = veri.indexOf("\"", bitis + 1);
             if (bitis > basla) {
                 return veri.substring(basla, bitis);
             }

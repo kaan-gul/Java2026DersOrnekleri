@@ -9,7 +9,7 @@ public class o23 {
 
         System.out.println("----------");
         for (int i = 0; i < 5; i++) {
-            sayi = rnd.nextInt(10,50);//10-49
+            sayi = rnd.nextInt(41) + 10; // 10-50
             System.out.println(sayi);
         }
     }

@@ -9,7 +9,8 @@ public class MealDBOrnegi {
     public static void main(String[] args) {
         try {
             String yemekAdi = "pizza"; // kullanıcıdan da alınabilir
-            String apiURL = "https://www.themealdb.com/api/json/v1/1/search.php?s=" + URLEncoder.encode(yemekAdi, "UTF-8");
+            String apiURL = "https://www.themealdb.com/api/json/v1/1/search.php?s="
+                    + URLEncoder.encode(yemekAdi, "UTF-8");
 
             URI uri = URI.create(apiURL);
             URL url = uri.toURL();
@@ -18,8 +19,7 @@ public class MealDBOrnegi {
             conn.setRequestMethod("GET");
 
             BufferedReader reader = new BufferedReader(
-                new InputStreamReader(conn.getInputStream())
-            );
+                    new InputStreamReader(conn.getInputStream()));
             String line;
             StringBuilder result = new StringBuilder();
             while ((line = reader.readLine()) != null) {
@@ -43,7 +43,8 @@ public class MealDBOrnegi {
 
     static String parcaGetir(String veri, String anahtar) {
         int index = veri.indexOf(anahtar);
-        if (index == -1) return null;
+        if (index == -1)
+            return null;
         int basla = index + anahtar.length();
         int bitis = veri.indexOf("\"", basla);
         return veri.substring(basla, bitis).replace("\\r\\n", "\n");

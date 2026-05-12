@@ -1,0 +1,11 @@
+usam dan verileri alacak
+
+sahte siteleri listeleyecek
+
+isterse sahte sitenin linki ile siteye gidecek
+            eğer site patlamış ise patladı diye bilir o veriyi elde etme yolu var ise
+
+kritiklik seviyesine göre de getirilebilir 1-10 arası
+
+type domain ip ipv6 vb filtrelenebilir
+

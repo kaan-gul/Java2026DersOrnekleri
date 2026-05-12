@@ -1,7 +1,7 @@
 public class o1 {
-    
+
     public static void main(String[] args) {
-        int sayi;
+        int sayi = 0;
         System.out.println(sayi);
     }
 }
